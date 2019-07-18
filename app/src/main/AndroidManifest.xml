@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".views.NewsDetailActivity"></activity>
+        <activity android:name=".views.NewsListActivity" />
+        <activity android:name=".views.SeminarDetailActivity" />
+        <activity android:name=".views.SeminarListActivity" />
+        <activity android:name=".views.MenuDetailActivity" />
+        <activity android:name=".views.MenuListActivity" />
+        <activity android:name=".views.LoginActivity" />
+        <activity android:name=".views.TopActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
