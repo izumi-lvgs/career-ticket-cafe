@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="horizontal"
+              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="150dp" android:id="@+id/menu_grid">
+              android:layout_height="200dp" android:id="@+id/menu_grid" android:padding="3dp">
 
     <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/thumbnail"/>
+            android:layout_width="match_parent"
+            tools:srcCompat="@tools:sample/avatars" android:id="@+id/thumbnail" android:layout_height="wrap_content"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/menu_name" android:layout_height="wrap_content" android:text="testtest"/>
+    <Button
+            android:text="@string/order_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/order_button" style="@style/Widget.AppCompat.Button"/>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <TextView
-                android:layout_width="match_parent"
-                android:id="@+id/menu_name" android:layout_height="100dp" android:text="testtest"/>
-        <Button
-                android:text="@string/order_button"
-                android:layout_width="match_parent"
-                android:layout_height="50dp" android:id="@+id/order_button" style="@style/Widget.AppCompat.Button"/>
+            android:layout_height="match_parent" android:layout_weight="0.5"
+            android:background="@color/color_main_dark">
     </LinearLayout>
 
 </LinearLayout>

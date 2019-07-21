@@ -1,14 +1,18 @@
 package com.leverages.careerticketcafe.controllers
 
 import android.content.Context
+import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.leverages.careerticketcafe.R
@@ -20,15 +24,18 @@ class MenuListActivity : AppCompatActivity() , MenuListViewHolder.ItemClickListe
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_list)
 
+        val texts: Array<TextView?> = arrayOfNulls(2)
+
         val hoges = listOf("hoge hoge piyo","てすとだよー","三つ目だよ")
 
         menuListRecyclerView.adapter = MenuListAdapter(this, this, hoges)
-        menuListRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-
+        menuListRecyclerView.layoutManager = GridLayoutManager(this, 3,RecyclerView.VERTICAL, false)
     }
 
     override fun onItemClick(view: View, position: Int) {
-        Toast.makeText(applicationContext, "position $position was tapped", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(applicationContext, "position $position was tapped", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, MenuDetailActivity::class.java)
+        startActivity(intent)
     }
 }
 

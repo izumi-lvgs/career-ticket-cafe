@@ -9,7 +9,7 @@
     </style>
 
     <style name="AppTheme.Menu" parent="AppTheme">
-
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
 
