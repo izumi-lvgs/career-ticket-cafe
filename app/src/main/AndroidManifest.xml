@@ -14,15 +14,15 @@
         <activity android:name=".controllers.SeminarDetailActivity" />
         <activity android:name=".controllers.SeminarListActivity" />
         <activity android:name=".controllers.MenuDetailActivity" />
-        <activity android:name=".controllers.MenuListActivity" />
-        <activity android:name=".controllers.LoginActivity" />
-        <activity android:name=".controllers.TopActivity">
+        <activity android:name=".controllers.MenuListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".controllers.LoginActivity" />
+        <activity android:name=".controllers.TopActivity" />
     </application>
 
 </manifest>
